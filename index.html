@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Music Player</title>
+</head>
+
+<body>
+
+
+    <header class="headingContainer">
+
+        <h1 id="heading">
+
+        </h1>
+
+        <div id="toggleButton">
+
+            <label class="switch-btn-text">
+
+                <input type="checkbox" id="themeToggle" onchange="toggleTheme()">
+
+                <div class="switch-body">
+
+                    <span class="slide-text">
+                        <span class="text active">Light</span>
+                    </span>
+
+                    <span class="slide">
+
+                        <span class="icon active-icon">
+                            ☀
+                        </span>
+
+                        <span class="icon inactive-icon">
+                            ☾
+                        </span>
+
+                    </span>
+
+                    <span class="slide-text">
+                        <span class="text inactive">Dark</span>
+                    </span>
+
+                </div>
+
+            </label>
+
+        </div>
+
+    </header>
+
+
+
+
+    <main class="mainContainer">
+
+
+        <section id="allSongContainer">
+
+            <div id="filterSection">
+
+                <label for="genres">
+                    Filter by Genre
+                </label>
+
+                <select id="genres" onchange="showSongs()">
+                    <option value="all">All Genres</option>
+                    <option value="lo-fi">Lo-Fi</option>
+                    <option value="pop">Pop</option>
+                    <option value="techno">Techno</option>
+                </select>
+
+            </div>
+
+
+            <div class="sectionHeader">
+
+                <h2 id="allSongsHeading">
+                    All Songs
+                </h2>
+
+            </div>
+
+            <div id="songsList">
+
+            </div>
+
+        </section>
+
+
+        <section id="currentSongContainer">
+
+            <div class="currentSongHeader">
+
+                <h2>
+                    Now Playing
+                </h2>
+
+            </div>
+
+
+            <div class="albumImageContainer">
+
+                <img id="currentSongImage" src="" alt="Current song artwork">
+
+            </div>
+
+
+            <div class="currentSongInfo">
+
+                <h2 id="currentSongName">
+                    Select a song
+                </h2>
+
+                <p id="currentSongArtist">
+                    No song selected
+                </p>
+
+            </div>
+
+            <audio id="audioPlayer" controls>
+                Your browser does not support the audio element.
+            </audio>
+
+
+            <div class="audioControlButtons">
+
+                <button class="control-button" id="previousButton" type="button">
+                    Previous
+                </button>
+
+
+
+                <button class="control-button" id="nextButton" type="button">
+                    Next
+                </button>
+
+
+                <button class="control-button primary-button" id="addToPlaylistButton" type="button">
+                    Add to Playlist
+                </button>
+
+            </div>
+
+        </section>
+
+        <section id="playlistContainer">
+
+
+
+            <div class="createPlaylist">
+
+                <input id="playlistInput" type="text" placeholder="Enter playlist name" autocomplete="off">
+
+
+                <button id="createPlaylistButton" type="button">
+                    Create Playlist
+                </button>
+
+            </div>
+
+
+
+            <div id="currentPlaylist">
+
+                <div class="playlistSectionHeader">
+
+                    <h2>
+                        Current Playlist
+                    </h2>
+
+                </div>
+
+
+
+                <div id="currentPlaylistSongs">
+
+                </div>
+
+            </div>
+
+
+
+            <div id="allPlaylist">
+
+                <div class="playlistSectionHeader">
+
+                    <h2>
+                        All Playlists
+                    </h2>
+
+                </div>
+
+
+
+                <div id="allPlaylistItems">
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
